@@ -56,22 +56,37 @@ class html {
 
     public static function generateTable($records) {
         $count = 0;
+        print "<!DOCTYPE html>\n";
+        print "<html lang='en'>\n";
+        print "<head>\n";
+        print("<title>Raheel's CSV Data to HTML Table </title>\n");
+
+        html::printExternalUrls();
+        html::printTableStyles();
+
+        print "</head>\n";
+        print "<body>\n";
+        print('<table class="table table-striped table-zebra"\n');
+
         foreach ($records as $record) {
             if($count == 0) {
                 $array = $record->returnArray();
                 $fields = array_keys($array);
                 $values = array_values($array);
-                print_r($fields);
-                print_r($values);
+                html::print_row($fields, "<thead><tr>", "</tr></thead><tbody>", "<th>", "</th>");
+                html::print_row($values, "<tr>", "</tr>", "<td>", "</td>");
             } else {
                 $array = $record->returnArray();
                 $values = array_values($array);
-                print_r($values);
+                html::print_row($values, "<tr>", "</tr>", "<td>", "</td>");
             }
             $count++;
         }
-    }
-}
+        print('</tbody></table>\n');
+        print "</body>\n";
+        print "</html>";
+    }   }
+
 
 class csv {
     static public function getRecords($filename) {
