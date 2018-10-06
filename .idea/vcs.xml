@@ -2,6 +2,7 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/cloudtunes" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/protected-everglades-95005" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/protected-everglades-95005/protected-everglades-95005" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/protected-ravine-11557" vcs="Git" />
