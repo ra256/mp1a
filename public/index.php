@@ -41,7 +41,7 @@ class record {
 
     }
 
-    public function createProperty($name = 'first', $value = 'Raheel') {
+    public function createProperty($name = 'first', $value = 'aheel') {
 
         $this->{$name} = $value;
 
