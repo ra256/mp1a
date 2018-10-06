@@ -59,7 +59,7 @@ class html {
         print "<!DOCTYPE html>\n";
         print "<html lang='en'>\n";
         print "<head>\n";
-        print("<title>CSV Data to HTML Table </title>\n");
+        print("<title>Raheel's CSV Data to HTML Table </title>\n");
 
         html::printExternalUrls();
         html::printTableStyles();
